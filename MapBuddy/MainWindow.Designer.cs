@@ -77,7 +77,7 @@
             this.c_region_mappoint = new System.Windows.Forms.CheckBox();
             this.c_region_mapnameoverride = new System.Windows.Forms.CheckBox();
             this.c_region_invasionpoint = new System.Windows.Forms.CheckBox();
-            this.c_region_FastTravelRestriction = new System.Windows.Forms.CheckBox();
+            this.c_region_horserideoverride = new System.Windows.Forms.CheckBox();
             this.c_region_hitset = new System.Windows.Forms.CheckBox();
             this.c_region_groupdefeatreward = new System.Windows.Forms.CheckBox();
             this.c_region_fasttravelrestriction = new System.Windows.Forms.CheckBox();
@@ -343,7 +343,7 @@
             this.tabPage9.Controls.Add(this.c_region_mappoint);
             this.tabPage9.Controls.Add(this.c_region_mapnameoverride);
             this.tabPage9.Controls.Add(this.c_region_invasionpoint);
-            this.tabPage9.Controls.Add(this.c_region_FastTravelRestriction);
+            this.tabPage9.Controls.Add(this.c_region_horserideoverride);
             this.tabPage9.Controls.Add(this.c_region_hitset);
             this.tabPage9.Controls.Add(this.c_region_groupdefeatreward);
             this.tabPage9.Controls.Add(this.c_region_fasttravelrestriction);
@@ -681,15 +681,15 @@
             this.c_region_invasionpoint.Text = "InvasionPoint";
             this.c_region_invasionpoint.UseVisualStyleBackColor = true;
             // 
-            // c_region_FastTravelRestriction
+            // c_region_horserideoverride
             // 
-            this.c_region_FastTravelRestriction.AutoSize = true;
-            this.c_region_FastTravelRestriction.Location = new System.Drawing.Point(400, 384);
-            this.c_region_FastTravelRestriction.Name = "c_region_FastTravelRestriction";
-            this.c_region_FastTravelRestriction.Size = new System.Drawing.Size(116, 19);
-            this.c_region_FastTravelRestriction.TabIndex = 49;
-            this.c_region_FastTravelRestriction.Text = "FastTravelRestriction";
-            this.c_region_FastTravelRestriction.UseVisualStyleBackColor = true;
+            this.c_region_horserideoverride.AutoSize = true;
+            this.c_region_horserideoverride.Location = new System.Drawing.Point(400, 384);
+            this.c_region_horserideoverride.Name = "c_region_horserideoverride";
+            this.c_region_horserideoverride.Size = new System.Drawing.Size(116, 19);
+            this.c_region_horserideoverride.TabIndex = 49;
+            this.c_region_horserideoverride.Text = "HorseRideOverride";
+            this.c_region_horserideoverride.UseVisualStyleBackColor = true;
             // 
             // c_region_hitset
             // 
@@ -1604,7 +1604,7 @@
         private CheckBox c_region_mappoint;
         private CheckBox c_region_mapnameoverride;
         private CheckBox c_region_invasionpoint;
-        private CheckBox c_region_FastTravelRestriction;
+        private CheckBox c_region_horserideoverride;
         private CheckBox c_region_hitset;
         private CheckBox c_region_groupdefeatreward;
         private CheckBox c_region_fasttravelrestriction;

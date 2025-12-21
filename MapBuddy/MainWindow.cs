@@ -115,7 +115,7 @@ namespace MapBuddy
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            string version = "0.0.3";
+            string version = "0.0.4";
             Text = "Map Buddy - " + version;
         }
 
@@ -353,7 +353,7 @@ namespace MapBuddy
             region_elements.Add("FastTravelRestriction", c_region_fasttravelrestriction.Checked);
             region_elements.Add("GroupDefeatReward", c_region_groupdefeatreward.Checked);
             region_elements.Add("Hitset", c_region_hitset.Checked);
-            region_elements.Add("FastTravelRestriction", c_region_FastTravelRestriction.Checked);
+            region_elements.Add("HorseRideOverride", c_region_horserideoverride.Checked);
             region_elements.Add("InvasionPoint", c_region_invasionpoint.Checked);
             region_elements.Add("MapNameOverride", c_region_mapnameoverride.Checked);
             region_elements.Add("MapPoint", c_region_mappoint.Checked);
@@ -430,7 +430,7 @@ namespace MapBuddy
             c_region_fasttravelrestriction.Checked = !c_region_fasttravelrestriction.Checked;
             c_region_groupdefeatreward.Checked = !c_region_groupdefeatreward.Checked;
             c_region_hitset.Checked = !c_region_hitset.Checked;
-            c_region_FastTravelRestriction.Checked = !c_region_FastTravelRestriction.Checked;
+            c_region_horserideoverride.Checked = !c_region_horserideoverride.Checked;
             c_region_invasionpoint.Checked = !c_region_invasionpoint.Checked;
             c_region_mapnameoverride.Checked = !c_region_mapnameoverride.Checked;
             c_region_mappoint.Checked = !c_region_mappoint.Checked;
