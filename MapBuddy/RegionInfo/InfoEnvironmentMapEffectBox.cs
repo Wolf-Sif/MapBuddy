@@ -28,7 +28,7 @@ namespace MapBuddy.RegionInfo
                     $"Shape;" +
                     $"Position;" +
                     $"Rotation;" +
-                    $"Unk2C;" +
+                    $"RegionID;" +
                     $"Unk40;" +
                     $"MapStudioLayer;" +
                     $"UnkE08;" +
@@ -42,10 +42,10 @@ namespace MapBuddy.RegionInfo
                     $"UnkT08;" +
                     $"UnkT09;" +
                     $"UnkT0A;" +
-                    $"UnkT24;" +
-                    $"UnkT28;" +
+                    $"SpecularLightMult;" +
+                    $"PointLightMult;" +
                     $"UnkT2C;" +
-                    $"UnkT2E;" +
+                    $"IsModifyLight;" +
                     $"UnkT2F;" +
                     $"UnkT30;" +
                     $"UnkT33;" +
@@ -112,7 +112,7 @@ namespace MapBuddy.RegionInfo
                     $"{entry.Shape};" +
                     $"{entry.Position};" +
                     $"{entry.Rotation};" +
-                    $"{entry.Unk2C};" +
+                    $"{entry.RegionID};" +
                     $"{entry.Unk40};" +
                     $"{entry.MapStudioLayer};" +
                     $"{entry.UnkE08};" +
@@ -126,10 +126,10 @@ namespace MapBuddy.RegionInfo
                     $"{entry.UnkT08};" +
                     $"{entry.UnkT09};" +
                     $"{entry.UnkT0A};" +
-                    $"{entry.UnkT24};" +
-                    $"{entry.UnkT28};" +
+                    $"{entry.SpecularLightMult};" +
+                    $"{entry.PointLightMult};" +
                     $"{entry.UnkT2C};" +
-                    $"{entry.UnkT2E};" +
+                    $"{entry.IsModifyLight};" +
                     $"{entry.UnkT2F};" +
                     $"{entry.UnkT30};" +
                     $"{entry.UnkT33};" +

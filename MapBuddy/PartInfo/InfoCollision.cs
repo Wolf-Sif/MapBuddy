@@ -23,17 +23,17 @@ namespace MapBuddy.Info
 
             header = $"Name;" +
                     $"ModelName;" +
-                    $"Unk08;" +
+                    $"InstanceID;" +
                     $"SibPath;" +
                     $"Position;" +
                     $"Rotation;" +
                     $"Scale;" +
-                    $"Unk44;" +
+                    $"GameEditionDisable;" +
                     $"MapStudioLayer;" +
                     $"EntityID;" +
-                    $"UnkE04;" +
-                    $"LodParamID;" +
-                    $"UnkE09;" +
+                    $"GameEditionDisable;" +
+                    $"isUsePartsDrawParamID;" +
+                    $"PartsDrawParamID;" +
                     $"IsPointLightShadowSrc;" +
                     $"UnkE0B;" +
                     $"IsShadowSrc;" +
@@ -134,10 +134,10 @@ namespace MapBuddy.Info
                     $"Gparam.EnvMapID;" +
 
                     $"SceneGparam.TransitionTime;" +
-                    $"SceneGparam.Unk18;" +
-                    $"SceneGparam.Unk19;" +
-                    $"SceneGparam.Unk1A;" +
-                    $"SceneGparam.Unk1B;" +
+                    $"SceneGparam.GparamSubID_Base;" +
+                    $"SceneGparam.GparamSubID_Override1;" +
+                    $"SceneGparam.GparamSubID_Override2;" +
+                    $"SceneGparam.GparamSubID_Override3;" +
                     $"SceneGparam.Unk1C;" +
                     $"SceneGparam.Unk1D;" +
                     $"SceneGparam.Unk20;" +
@@ -145,21 +145,21 @@ namespace MapBuddy.Info
 
                     $"Unk8.Unk00;" +
 
-                    $"Unk10.MapID;" +
-                    $"Unk10.Unk04;" +
-                    $"Unk10.Unk0C;" +
-                    $"Unk10.Unk10;" +
-                    $"Unk10.Unk14;" +
+                    $"TileLoad.MapID;" +
+                    $"TileLoad.Unk04;" +
+                    $"TileLoad.Unk0C;" +
+                    $"TileLoad.Unk10;" +
+                    $"TileLoad.CullingHeightBehavior;" +
 
                     $"Unk11.Unk00;" +
                     $"Unk11.Unk04;" +
 
-                    $"UnkT00;" +
+                    $"HitFilterID;" +
                     $"UnkT01;" +
                     $"UnkT02;" +
                     $"UnkT03;" +
                     $"UnkT14;" +
-                    $"UnkT18;" +
+                    $"LocationTextID;" +
                     $"UnkT1C;" +
                     $"PlayRegionID;" +
                     $"UnkT24;" +
@@ -233,17 +233,17 @@ namespace MapBuddy.Info
                 line = line +
                     $"{entity.Name};" +
                     $"{entity.ModelName};" +
-                    $"{entity.Unk08};" +
+                    $"{entity.InstanceID};" +
                     $"{entity.SibPath};" +
                     $"{entity.Position};" +
                     $"{entity.Rotation};" +
                     $"{entity.Scale};" +
-                    $"{entity.Unk44};" +
+                    $"{entity.GameEditionDisable};" +
                     $"{entity.MapStudioLayer};" +
                     $"{entity.EntityID};" +
-                    $"{entity.UnkE04};" +
-                    $"{entity.LodParamID};" +
-                    $"{entity.UnkE09};" +
+                    $"{entity.GameEditionDisable};" +
+                    $"{entity.isUsePartsDrawParamID};" +
+                    $"{entity.PartsDrawParamID};" +
                     $"{entity.IsPointLightShadowSrc};" +
                     $"{entity.UnkE0B};" +
                     $"{entity.IsShadowSrc};" +
@@ -344,10 +344,10 @@ namespace MapBuddy.Info
                     $"{entity.Gparam.EnvMapID};" +
 
                     $"{entity.SceneGparam.TransitionTime};" +
-                    $"{entity.SceneGparam.Unk18};" +
-                    $"{entity.SceneGparam.Unk19};" +
-                    $"{entity.SceneGparam.Unk1A};" +
-                    $"{entity.SceneGparam.Unk1B};" +
+                    $"{entity.SceneGparam.GparamSubID_Base};" +
+                    $"{entity.SceneGparam.GparamSubID_Override1};" +
+                    $"{entity.SceneGparam.GparamSubID_Override2};" +
+                    $"{entity.SceneGparam.GparamSubID_Override3};" +
                     $"{entity.SceneGparam.Unk1C};" +
                     $"{entity.SceneGparam.Unk1D};" +
                     $"{entity.SceneGparam.Unk20};" +
@@ -355,21 +355,21 @@ namespace MapBuddy.Info
 
                     $"{entity.Unk8.Unk00};" +
 
-                    $"{entity.Unk10.MapID};" +
-                    $"{entity.Unk10.Unk04};" +
-                    $"{entity.Unk10.Unk0C};" +
-                    $"{entity.Unk10.Unk10};" +
-                    $"{entity.Unk10.Unk14};" +
+                    $"{entity.TileLoad.MapID};" +
+                    $"{entity.TileLoad.Unk04};" +
+                    $"{entity.TileLoad.Unk0C};" +
+                    $"{entity.TileLoad.Unk10};" +
+                    $"{entity.TileLoad.CullingHeightBehavior};" +
 
                     $"{entity.Unk11.Unk00};" +
                     $"{entity.Unk11.Unk04};" +
 
-                    $"{entity.UnkT00};" +
+                    $"{entity.HitFilterID};" +
                     $"{entity.UnkT01};" +
                     $"{entity.UnkT02};" +
                     $"{entity.UnkT03};" +
                     $"{entity.UnkT14};" +
-                    $"{entity.UnkT18};" +
+                    $"{entity.LocationTextID};" +
                     $"{entity.UnkT1C};" +
                     $"{entity.PlayRegionID};" +
                     $"{entity.UnkT24};" +

@@ -28,7 +28,7 @@ namespace MapBuddy.RegionInfo
                     $"Shape;" +
                     $"Position;" +
                     $"Rotation;" +
-                    $"Unk2C;" +
+                    $"RegionID;" +
                     $"Unk40;" +
                     $"MapStudioLayer;" +
                     $"UnkE08;" +
@@ -37,7 +37,7 @@ namespace MapBuddy.RegionInfo
                     $"UnkS0C;" +
                     $"ActivationPartName;" +
                     $"EntityID;" +
-                    $"UnkT00;" +
+                    $"WeatherLotParamID;" +
 
                     $"\n";
 
@@ -99,7 +99,7 @@ namespace MapBuddy.RegionInfo
                     $"{entry.Shape};" +
                     $"{entry.Position};" +
                     $"{entry.Rotation};" +
-                    $"{entry.Unk2C};" +
+                    $"{entry.RegionID};" +
                     $"{entry.Unk40};" +
                     $"{entry.MapStudioLayer};" +
                     $"{entry.UnkE08};" +
@@ -108,7 +108,7 @@ namespace MapBuddy.RegionInfo
                     $"{entry.UnkS0C};" +
                     $"{entry.ActivationPartName};" +
                     $"{entry.EntityID};" +
-                    $"{entry.UnkT00};" +
+                    $"{entry.WeatherLotParamID};" +
 
                     $"\n";
 

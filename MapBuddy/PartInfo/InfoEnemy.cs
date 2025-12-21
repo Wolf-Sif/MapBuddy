@@ -24,17 +24,17 @@ namespace MapBuddy.Info
 
             header = $"Name;" +
                     $"ModelName;" +
-                    $"Unk08;" +
+                    $"InstanceID;" +
                     $"SibPath;" +
                     $"Position;" +
                     $"Rotation;" +
                     $"Scale;" +
-                    $"Unk44;" +
+                    $"GameEditionDisable;" +
                     $"MapStudioLayer;" +
                     $"EntityID;" +
-                    $"UnkE04;" +
-                    $"LodParamID;" +
-                    $"UnkE09;" +
+                    $"GameEditionDisable;" +
+                    $"isUsePartsDrawParamID;" +
+                    $"PartsDrawParamID;" +
                     $"IsPointLightShadowSrc;" +
                     $"UnkE0B;" +
                     $"IsShadowSrc;" +
@@ -119,11 +119,11 @@ namespace MapBuddy.Info
                     $"Gparam.LightScatteringID;" +
                     $"Gparam.EnvMapID;" +
                     $"Unk8.Unk00;" +
-                    $"Unk10.MapID;" +
-                    $"Unk10.Unk04;" +
-                    $"Unk10.Unk0C;" +
-                    $"Unk10.Unk10;" +
-                    $"Unk10.Unk14;" +
+                    $"TileLoad.MapID;" +
+                    $"TileLoad.Unk04;" +
+                    $"TileLoad.Unk0C;" +
+                    $"TileLoad.Unk10;" +
+                    $"TileLoad.CullingHeightBehavior;" +
                     $"ThinkParamID;" +
                     $"NPCParamID;" +
                     $"TalkID;" +
@@ -201,17 +201,17 @@ namespace MapBuddy.Info
                 line = line +
                     $"{enemy.Name};" +
                     $"{enemy.ModelName};" +
-                    $"{enemy.Unk08};" +
+                    $"{enemy.InstanceID};" +
                     $"{enemy.SibPath};" +
                     $"{enemy.Position};" +
                     $"{enemy.Rotation};" +
                     $"{enemy.Scale};" +
-                    $"{enemy.Unk44};" +
+                    $"{enemy.GameEditionDisable};" +
                     $"{enemy.MapStudioLayer};" +
                     $"{enemy.EntityID};" +
-                    $"{enemy.UnkE04};" +
-                    $"{enemy.LodParamID};" +
-                    $"{enemy.UnkE09};" +
+                    $"{enemy.GameEditionDisable};" +
+                    $"{enemy.isUsePartsDrawParamID};" +
+                    $"{enemy.PartsDrawParamID};" +
                     $"{enemy.IsPointLightShadowSrc};" +
                     $"{enemy.UnkE0B};" +
                     $"{enemy.IsShadowSrc};" +
@@ -296,11 +296,11 @@ namespace MapBuddy.Info
                     $"{enemy.Gparam.LightScatteringID};" +
                     $"{enemy.Gparam.EnvMapID};" +
                     $"{enemy.Unk8.Unk00};" +
-                    $"{enemy.Unk10.MapID};" +
-                    $"{enemy.Unk10.Unk04};" +
-                    $"{enemy.Unk10.Unk0C};" +
-                    $"{enemy.Unk10.Unk10};" +
-                    $"{enemy.Unk10.Unk14};" +
+                    $"{enemy.TileLoad.MapID};" +
+                    $"{enemy.TileLoad.Unk04};" +
+                    $"{enemy.TileLoad.Unk0C};" +
+                    $"{enemy.TileLoad.Unk10};" +
+                    $"{enemy.TileLoad.CullingHeightBehavior};" +
                     $"{enemy.ThinkParamID};" +
                     $"{enemy.NPCParamID};" +
                     $"{enemy.TalkID};" +

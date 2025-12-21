@@ -1,24 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Xylozi\\Documents\\C# Projects\\MapBuddy\\MapBuddy\\MapBuddy.csproj": {}
+    "C:\\Users\\lettt\\Documents\\fromsoft\\MapBuddy\\MapBuddy\\MapBuddy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Xylozi\\Documents\\C# Projects\\MapBuddy\\MapBuddy\\MapBuddy.csproj": {
+    "C:\\Users\\lettt\\Documents\\fromsoft\\MapBuddy\\MapBuddy\\MapBuddy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Xylozi\\Documents\\C# Projects\\MapBuddy\\MapBuddy\\MapBuddy.csproj",
+        "projectUniqueName": "C:\\Users\\lettt\\Documents\\fromsoft\\MapBuddy\\MapBuddy\\MapBuddy.csproj",
         "projectName": "MapBuddy",
-        "projectPath": "C:\\Users\\Xylozi\\Documents\\C# Projects\\MapBuddy\\MapBuddy\\MapBuddy.csproj",
-        "packagesPath": "C:\\Users\\Xylozi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Xylozi\\Documents\\C# Projects\\MapBuddy\\MapBuddy\\obj\\",
+        "projectPath": "C:\\Users\\lettt\\Documents\\fromsoft\\MapBuddy\\MapBuddy\\MapBuddy.csproj",
+        "packagesPath": "C:\\Users\\lettt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lettt\\Documents\\fromsoft\\MapBuddy\\MapBuddy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Xylozi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\lettt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
@@ -37,11 +41,47 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
+          "dependencies": {
+            "BouncyCastle.Cryptography": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "CommunityToolkit.HighPerformance": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
+            "DotNext.IO": {
+              "target": "Package",
+              "version": "[4.7.2, )"
+            },
+            "DotNext.Unsafe": {
+              "target": "Package",
+              "version": "[4.7.2, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "ZstdSharp.Port": {
+              "target": "Package",
+              "version": "[0.8.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -61,7 +101,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -28,7 +28,7 @@ namespace MapBuddy.RegionInfo
                     $"Shape;" +
                     $"Position;" +
                     $"Rotation;" +
-                    $"Unk2C;" +
+                    $"RegionID;" +
                     $"Unk40;" +
                     $"MapStudioLayer;" +
                     $"UnkE08;" +
@@ -38,7 +38,7 @@ namespace MapBuddy.RegionInfo
                     $"ActivationPartName;" +
                     $"EntityID;" +
                     $"EffectID;" +
-                    $"UnkT04;" +
+                    $"StartDisabled;" +
 
                     $"\n";
  
@@ -100,7 +100,7 @@ namespace MapBuddy.RegionInfo
                     $"{entry.Shape};" +
                     $"{entry.Position};" +
                     $"{entry.Rotation};" +
-                    $"{entry.Unk2C};" +
+                    $"{entry.RegionID};" +
                     $"{entry.Unk40};" +
                     $"{entry.MapStudioLayer};" +
                     $"{entry.UnkE08};" +
@@ -110,7 +110,7 @@ namespace MapBuddy.RegionInfo
                     $"{entry.ActivationPartName};" +
                     $"{entry.EntityID};" +
                     $"{entry.EffectID};" +
-                    $"{entry.UnkT04};" +
+                    $"{entry.StartDisabled};" +
 
                     $"\n";
 

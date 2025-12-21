@@ -33,7 +33,7 @@ namespace MapBuddy.EventInfo
                     $"UnkS0C;" +
                     $"Name;" +
                     $"SignPartName;" +
-                    $"UnkT04;" +
+                    $"SignPuddleParamID;" +
 
                     $"\n";
 
@@ -103,7 +103,7 @@ namespace MapBuddy.EventInfo
                     $"{entry.UnkS0C};" +
                     $"{entry.Name};" +
                     $"{entry.SignPartName};" +
-                    $"{entry.UnkT04};" +
+                    $"{entry.SignPuddleParamID};" +
 
                     $"\n";
 

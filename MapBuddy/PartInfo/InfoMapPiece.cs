@@ -23,17 +23,17 @@ namespace MapBuddy.Info
 
             header = $"Name;" +
                     $"ModelName;" +
-                    $"Unk08;" +
+                    $"InstanceID;" +
                     $"SibPath;" +
                     $"Position;" +
                     $"Rotation;" +
                     $"Scale;" +
-                    $"Unk44;" +
+                    $"GameEditionDisable;" +
                     $"MapStudioLayer;" +
                     $"EntityID;" +
-                    $"UnkE04;" +
-                    $"LodParamID;" +
-                    $"UnkE09;" +
+                    $"GameEditionDisable;" +
+                    $"isUsePartsDrawParamID;" +
+                    $"PartsDrawParamID;" +
                     $"IsPointLightShadowSrc;" +
                     $"UnkE0B;" +
                     $"IsShadowSrc;" +
@@ -120,23 +120,23 @@ namespace MapBuddy.Info
                     $"Gparam.LightScatteringID;" +
                     $"Gparam.EnvMapID;" +
 
-                    $"Unk7.Unk00;" +
-                    $"Unk7.Unk04;" +
-                    $"Unk7.Unk08;" +
-                    $"Unk7.Unk0C;" +
-                    $"Unk7.Unk10;" +
-                    $"Unk7.Unk14;" +
-                    $"Unk7.Unk18;" +
+                    $"GrassConfig.GrassParamId0 ;" +
+                    $"GrassConfig.GrassParamId1;" +
+                    $"GrassConfig.GrassParamId2;" +
+                    $"GrassConfig.GrassParamId3;" +
+                    $"GrassConfig.GrassParamId4;" +
+                    $"GrassConfig.GrassParamId5;" +
+                    $"GrassConfig.Unk18;" +
 
                     $"Unk8.Unk00;" +
 
                     $"Unk9.Unk00;" +
 
-                    $"Unk10.MapID;" +
-                    $"Unk10.Unk04;" +
-                    $"Unk10.Unk0C;" +
-                    $"Unk10.Unk10;" +
-                    $"Unk10.Unk14;" +
+                    $"TileLoad.MapID;" +
+                    $"TileLoad.Unk04;" +
+                    $"TileLoad.Unk0C;" +
+                    $"TileLoad.Unk10;" +
+                    $"TileLoad.CullingHeightBehavior;" +
 
                     $"Unk11.Unk00;" +
                     $"Unk11.Unk04;" +
@@ -199,17 +199,17 @@ namespace MapBuddy.Info
                 line = line +
                     $"{entity.Name};" +
                     $"{entity.ModelName};" +
-                    $"{entity.Unk08};" +
+                    $"{entity.InstanceID};" +
                     $"{entity.SibPath};" +
                     $"{entity.Position};" +
                     $"{entity.Rotation};" +
                     $"{entity.Scale};" +
-                    $"{entity.Unk44};" +
+                    $"{entity.GameEditionDisable};" +
                     $"{entity.MapStudioLayer};" +
                     $"{entity.EntityID};" +
-                    $"{entity.UnkE04};" +
-                    $"{entity.LodParamID};" +
-                    $"{entity.UnkE09};" +
+                    $"{entity.GameEditionDisable};" +
+                    $"{entity.isUsePartsDrawParamID};" +
+                    $"{entity.PartsDrawParamID};" +
                     $"{entity.IsPointLightShadowSrc};" +
                     $"{entity.UnkE0B};" +
                     $"{entity.IsShadowSrc};" +
@@ -296,23 +296,23 @@ namespace MapBuddy.Info
                     $"{entity.Gparam.LightScatteringID};" +
                     $"{entity.Gparam.EnvMapID};" +
 
-                    $"{entity.Unk7.Unk00};" +
-                    $"{entity.Unk7.Unk04};" +
-                    $"{entity.Unk7.Unk08};" +
-                    $"{entity.Unk7.Unk0C};" +
-                    $"{entity.Unk7.Unk10};" +
-                    $"{entity.Unk7.Unk14};" +
-                    $"{entity.Unk7.Unk18};" +
+                    $"{entity.Grass.GrassParamId0 };" +
+                    $"{entity.Grass.GrassParamId1};" +
+                    $"{entity.Grass.GrassParamId2};" +
+                    $"{entity.Grass.GrassParamId3};" +
+                    $"{entity.Grass.GrassParamId4};" +
+                    $"{entity.Grass.GrassParamId5};" +
+                    $"{entity.Grass.Unk18};" +
 
                     $"{entity.Unk8.Unk00};" +
 
                     $"{entity.Unk9.Unk00};" +
 
-                    $"{entity.Unk10.MapID};" +
-                    $"{entity.Unk10.Unk04};" +
-                    $"{entity.Unk10.Unk0C};" +
-                    $"{entity.Unk10.Unk10};" +
-                    $"{entity.Unk10.Unk14};" +
+                    $"{entity.TileLoad.MapID};" +
+                    $"{entity.TileLoad.Unk04};" +
+                    $"{entity.TileLoad.Unk0C};" +
+                    $"{entity.TileLoad.Unk10};" +
+                    $"{entity.TileLoad.CullingHeightBehavior};" +
 
                     $"{entity.Unk11.Unk00};" +
                     $"{entity.Unk11.Unk04};" +

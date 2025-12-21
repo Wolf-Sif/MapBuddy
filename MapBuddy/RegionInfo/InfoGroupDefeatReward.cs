@@ -28,7 +28,7 @@ namespace MapBuddy.RegionInfo
                     $"Shape;" +
                     $"Position;" +
                     $"Rotation;" +
-                    $"Unk2C;" +
+                    $"RegionID;" +
                     $"Unk40;" +
                     $"MapStudioLayer;" +
                     $"UnkE08;" +
@@ -50,7 +50,7 @@ namespace MapBuddy.RegionInfo
                     $"PartNames[7];" +
                     $"UnkT34;" +
                     $"UnkT38;" +
-                    $"UnkT54;" +
+                    $"EstusFlaskRecoveryID;" +
 
                     $"\n";
  
@@ -112,7 +112,7 @@ namespace MapBuddy.RegionInfo
                     $"{entry.Shape};" +
                     $"{entry.Position};" +
                     $"{entry.Rotation};" +
-                    $"{entry.Unk2C};" +
+                    $"{entry.RegionID};" +
                     $"{entry.Unk40};" +
                     $"{entry.MapStudioLayer};" +
                     $"{entry.UnkE08};" +
@@ -134,7 +134,7 @@ namespace MapBuddy.RegionInfo
                     $"{entry.PartNames[7]};" +
                     $"{entry.UnkT34};" +
                     $"{entry.UnkT38};" +
-                    $"{entry.UnkT54};" +
+                    $"{entry.EstusFlaskRecoveryID};" +
 
                     $"\n";
 

@@ -13,7 +13,17 @@
       <HintPath>..\..\Scrambler\SoulsFormats\SoulsFormats\bin\Debug\net7.0-windows\SoulsFormats.dll</HintPath>
     </Reference>
   </ItemGroup>
-  
+
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.4.0" />
+    <PackageReference Include="CommunityToolkit.HighPerformance" Version="8.2.2" />
+    <PackageReference Include="DotNext.IO" Version="4.7.2" />
+    <PackageReference Include="DotNext.Unsafe" Version="4.7.2" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <PackageReference Include="ZstdSharp.Port" Version="0.8.1" />
+  </ItemGroup>
+
   <ItemGroup>
     <Content Include="Resources\**">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

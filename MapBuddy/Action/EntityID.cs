@@ -327,7 +327,7 @@ namespace MapBuddy.Action
             {
                 id_list.Add(Convert.ToInt32(entity.EntityID));
             }
-            foreach (MSBE.Region.HorseProhibition entity in msb.Regions.HorseProhibitions)
+            foreach (MSBE.Region.HorseRideOverride entity in msb.Regions.HorseRideOverrides)
             {
                 id_list.Add(Convert.ToInt32(entity.EntityID));
             }

@@ -33,8 +33,8 @@ namespace MapBuddy.EventInfo
                     $"UnkS0C;" +
                     $"Name;" +
                     $"RetryPartName;" +
-                    $"EventFlagID;" +
-                    $"UnkT08;" +
+                    $"TriggerEventFlagID;" +
+                    $"RetryDistance;" +
                     $"RetryRegionName;" +
 
                     $"\n";
@@ -105,8 +105,8 @@ namespace MapBuddy.EventInfo
                     $"{entry.UnkS0C};" +
                     $"{entry.Name};" +
                     $"{entry.RetryPartName};" +
-                    $"{entry.EventFlagID};" +
-                    $"{entry.UnkT08};" +
+                    $"{entry.TriggerEventFlagID};" +
+                    $"{entry.RetryDistance};" +
                     $"{entry.RetryRegionName};" +
 
                     $"\n";

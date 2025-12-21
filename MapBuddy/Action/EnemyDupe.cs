@@ -173,7 +173,7 @@ namespace MapBuddy.Action
 
         public MSBE.Part.Enemy DupeEnemy(MSBE.Part.Enemy enemy, MSBE.Part.Enemy sourceEnemy, int dupeLevel)
         {
-            int offset = sourceEnemy.Unk08 + (10000 * dupeLevel); // This is used to ensure Unk08 is a unique ID
+            int offset = sourceEnemy.InstanceID + (10000 * dupeLevel); // This is used to ensure InstanceID is a unique ID
             uint entityId = 0; // Dupes should never inherit the source's entity ID
             int talkId = 0; // Dupes should never inherit the source's talk ID
             short platoonID = 0; // Dupes should never inherit the source's platoon ID
@@ -181,16 +181,16 @@ namespace MapBuddy.Action
             // Part
             enemy.Name = sourceEnemy.Name + $"_DUPE_{dupeLevel}";
             enemy.ModelName = sourceEnemy.ModelName;
-            enemy.Unk08 = offset;
+            enemy.InstanceID = offset;
             enemy.SibPath = sourceEnemy.SibPath;
             enemy.Position = sourceEnemy.Position;
             enemy.Rotation = sourceEnemy.Rotation;
             enemy.Scale = sourceEnemy.Scale;
-            enemy.Unk44 = sourceEnemy.Unk44;
+            enemy.GameEditionDisable = sourceEnemy.GameEditionDisable;
             enemy.EntityID = entityId; 
-            enemy.UnkE04 = sourceEnemy.UnkE04;
-            enemy.LodParamID = sourceEnemy.LodParamID;
-            enemy.UnkE09 = sourceEnemy.UnkE09;
+            enemy.GameEditionDisable = sourceEnemy.GameEditionDisable;
+            enemy.isUsePartsDrawParamID = sourceEnemy.isUsePartsDrawParamID;
+            enemy.PartsDrawParamID = sourceEnemy.PartsDrawParamID;
             enemy.IsPointLightShadowSrc = sourceEnemy.IsPointLightShadowSrc;
             enemy.UnkE0B = sourceEnemy.UnkE0B;
             enemy.IsShadowSrc = sourceEnemy.IsShadowSrc;
@@ -221,7 +221,7 @@ namespace MapBuddy.Action
             enemy.Unk1 = sourceEnemy.Unk1;
             enemy.Gparam = sourceEnemy.Gparam;
             enemy.Unk8 = sourceEnemy.Unk8;
-            enemy.Unk10 = sourceEnemy.Unk10;
+            enemy.TileLoad = sourceEnemy.TileLoad;
 
             // Enemy-specific
             enemy.ThinkParamID = sourceEnemy.ThinkParamID;

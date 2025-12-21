@@ -173,9 +173,9 @@ namespace MapBuddy.Action
                     {
                         InfoHitset action = new InfoHitset(path, map_dict, isSplitbyMap);
                     }
-                    if (propertyName == "HorseProhibition")
+                    if (propertyName == "HorseRideOverride")
                     {
-                        InfoHorseProhibition action = new InfoHorseProhibition(path, map_dict, isSplitbyMap);
+                        InfoHorseRideOverride action = new InfoHorseRideOverride(path, map_dict, isSplitbyMap);
                     }
                     if (propertyName == "InvasionPoint")
                     {
