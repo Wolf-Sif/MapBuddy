@@ -28,7 +28,7 @@ namespace MapBuddy.Action
                 string map_name = entry.Key;
                 string map_path = entry.Value;
 
-                logger.AddToLog($"Editing {map_name}.");
+                logger.AddToDebugLog($"Editing {map_name}.");
 
                 string[] map_indexes = map_name.Replace("m", "").Split("_");
                 string entity_prefix = map_indexes[0] + map_indexes[1];
@@ -51,7 +51,7 @@ namespace MapBuddy.Action
 
                 msb.Write(map_path, compressionType);
 
-                logger.AddToLog($"Finished editing {map_name}.");
+                logger.AddToDebugLog($"Finished editing {map_name}.");
                 logger.WriteLog();
             }
 

@@ -50,14 +50,18 @@ namespace MapBuddy
                 Directory.CreateDirectory(log_dir);
             }
 
-            File.WriteAllText(Path.Combine(log_dir, "log.txt"), "");
+            File.WriteAllText(Path.Combine(log_dir, "debugLog.txt"), "");
 
             // Defaults
             c_entityid_enemy.Checked = true;
             t_entityid_start.Text = "100";
-            t_entityid_end.Text = "800";
+            t_entityid_end.Text = "9999";
 
             c_entitygroup_enemy.Checked = true;
+            c_entityid_printDebug.Checked = false;
+            // Initialize the static logger flag and keep it in sync with the checkbox
+            Logger.PrintDebug = c_entityid_printDebug.Checked;
+            c_entityid_printDebug.CheckedChanged += c_entityid_printDebug_CheckedChanged;
             t_entitygroup_id.Text = "40005000";
             t_entitygroup_index.Text = "0";
 
@@ -70,7 +74,11 @@ namespace MapBuddy
 
             UpdateMapSelection(mod_folder);
         }
-        
+        private void c_entityid_printDebug_CheckedChanged(object sender, EventArgs e)
+        {
+            Logger.PrintDebug = c_entityid_printDebug.Checked;
+        }
+
         private void UpdateMapSelection(string path)
         {
             if (String.IsNullOrEmpty(path))
@@ -193,10 +201,10 @@ namespace MapBuddy
                 return;
             }
 
-            int start_id_num = Convert.ToInt32(start_id);
-            int end_id_num = Convert.ToInt32(end_id);
+            ulong start_id_num = Convert.ToUInt64(start_id);
+            ulong end_id_num = Convert.ToUInt64(end_id);
 
-            if(end_id_num < start_id_num)
+            if (end_id_num < start_id_num)
             {
                 MessageBox.Show($"End ID is smaller than Start ID.", "Error", MessageBoxButtons.OK);
                 return;
@@ -223,9 +231,9 @@ namespace MapBuddy
                 c_entityid_asset.Checked, 
                 c_entityid_enemy.Checked, 
                 c_entityid_player.Checked,
-                c_override_existing.Checked, 
-                Convert.ToInt32(t_entityid_start.Text),
-                Convert.ToInt32(t_entityid_end.Text)
+                c_override_existing.Checked,
+                Convert.ToUInt64(t_entityid_start.Text),
+                Convert.ToUInt64(t_entityid_end.Text)
             );
         }
 
@@ -270,7 +278,7 @@ namespace MapBuddy
 
             try
             {
-                int entitygroup_id = Convert.ToInt32(t_entitygroup_id.Text);
+                ulong entitygroup_id = Convert.ToUInt64(t_entitygroup_id.Text);
             }
             catch(Exception ex)
             {
@@ -280,7 +288,7 @@ namespace MapBuddy
 
             try
             {
-                int entitygroup_index = Convert.ToInt32(t_entitygroup_index.Text);
+                ulong entitygroup_index = Convert.ToUInt64(t_entitygroup_index.Text);
 
                 if (entitygroup_index > 7 || entitygroup_index < 0)
                 {

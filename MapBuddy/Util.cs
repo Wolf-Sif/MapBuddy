@@ -18,7 +18,7 @@ namespace MapBuddy
             if (map_selection == "All")
             {
                 map_list = Directory.GetFileSystemEntries(Path.Combine(path, "map", "mapstudio"), @"*.msb.dcx").ToList();
-                logger.AddToLog($"Editing all maps.");
+                logger.AddToDebugLog($"Editing all maps.");
             }
             else
             {
@@ -31,7 +31,7 @@ namespace MapBuddy
                     }
                 }
 
-                logger.AddToLog($"Editing map {map_selection}.");
+                logger.AddToDebugLog($"Editing map {map_selection}.");
             }
 
             foreach (string map in map_list)

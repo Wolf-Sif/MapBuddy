@@ -41,7 +41,7 @@ namespace MapBuddy.Action
 
                 if (edit)
                 {
-                    logger.AddToLog($"Editing {map_name}.");
+                    logger.AddToDebugLog($"Editing {map_name}.");
 
                     string[] map_indexes = map_name.Replace("m", "").Split("_");
 
@@ -57,7 +57,7 @@ namespace MapBuddy.Action
 
                     msb.Write(map_path, compressionType);
 
-                    logger.AddToLog($"Finished editing {map_name}.");
+                    logger.AddToDebugLog($"Finished editing {map_name}.");
                     logger.WriteLog();
                 }
             }
