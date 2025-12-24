@@ -119,8 +119,11 @@
             textBox18 = new TextBox();
             b_map_merge = new Button();
             tabPage8 = new TabPage();
+            textBox23 = new TextBox();
             c_entityid_player = new CheckBox();
             c_entityid_printDebug = new CheckBox();
+            c_entityID_use_ignore_list = new CheckBox();
+            textBox8 = new TextBox();
             t_entityid_end = new TextBox();
             t_entityid_start = new TextBox();
             textBox7 = new TextBox();
@@ -161,8 +164,6 @@
             t_dupe_include_list = new TextBox();
             t_dupe_ignore_list = new TextBox();
             b_enemy_dupe = new Button();
-            textBox8 = new TextBox();
-            textBox23 = new TextBox();
             groupBox3.SuspendLayout();
             tabControl2.SuspendLayout();
             tabPage9.SuspendLayout();
@@ -1182,6 +1183,7 @@
             tabPage8.Controls.Add(textBox23);
             tabPage8.Controls.Add(c_entityid_player);
             tabPage8.Controls.Add(c_entityid_printDebug);
+            tabPage8.Controls.Add(c_entityID_use_ignore_list);
             tabPage8.Controls.Add(textBox8);
             tabPage8.Controls.Add(t_entityid_end);
             tabPage8.Controls.Add(t_entityid_start);
@@ -1202,6 +1204,16 @@
             tabPage8.Text = "Entity ID";
             tabPage8.UseVisualStyleBackColor = true;
             // 
+            // textBox23
+            // 
+            textBox23.Location = new Point(327, 12);
+            textBox23.Margin = new Padding(3, 4, 3, 4);
+            textBox23.Name = "textBox23";
+            textBox23.ReadOnly = true;
+            textBox23.Size = new Size(313, 26);
+            textBox23.TabIndex = 90;
+            textBox23.Text = " (NewEntityID=MapID..Unique4DigitEntityID)";
+            // 
             // c_entityid_player
             // 
             c_entityid_player.AutoSize = true;
@@ -1220,14 +1232,35 @@
             c_entityid_printDebug.Location = new Point(485, 82);
             c_entityid_printDebug.Margin = new Padding(3, 4, 3, 4);
             c_entityid_printDebug.Name = "c_entityid_printDebug";
-            c_entityid_printDebug.Size = new Size(126, 23);
+            c_entityid_printDebug.Size = new Size(129, 23);
             c_entityid_printDebug.TabIndex = 88;
             c_entityid_printDebug.Text = "Print Debug Log";
             c_entityid_printDebug.UseVisualStyleBackColor = true;
             // 
+            // c_entityID_use_ignore_list
+            // 
+            c_entityID_use_ignore_list.AutoSize = true;
+            c_entityID_use_ignore_list.Location = new Point(331, 113);
+            c_entityID_use_ignore_list.Margin = new Padding(3, 4, 3, 4);
+            c_entityID_use_ignore_list.Name = "c_entityID_use_ignore_list";
+            c_entityID_use_ignore_list.Size = new Size(142, 23);
+            c_entityID_use_ignore_list.TabIndex = 91;
+            c_entityID_use_ignore_list.Text = "Use ignore_chr_list";
+            c_entityID_use_ignore_list.UseVisualStyleBackColor = true;
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(327, 46);
+            textBox8.Margin = new Padding(3, 4, 3, 4);
+            textBox8.Name = "textBox8";
+            textBox8.ReadOnly = true;
+            textBox8.Size = new Size(313, 26);
+            textBox8.TabIndex = 87;
+            textBox8.Text = " Options";
+            // 
             // t_entityid_end
             // 
-            t_entityid_end.Location = new Point(487, 151);
+            t_entityid_end.Location = new Point(489, 181);
             t_entityid_end.Margin = new Padding(3, 4, 3, 4);
             t_entityid_end.Name = "t_entityid_end";
             t_entityid_end.Size = new Size(153, 26);
@@ -1235,7 +1268,7 @@
             // 
             // t_entityid_start
             // 
-            t_entityid_start.Location = new Point(167, 151);
+            t_entityid_start.Location = new Point(169, 181);
             t_entityid_start.Margin = new Padding(3, 4, 3, 4);
             t_entityid_start.Name = "t_entityid_start";
             t_entityid_start.Size = new Size(153, 26);
@@ -1243,7 +1276,7 @@
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(327, 151);
+            textBox7.Location = new Point(329, 181);
             textBox7.Margin = new Padding(3, 4, 3, 4);
             textBox7.Name = "textBox7";
             textBox7.ReadOnly = true;
@@ -1253,7 +1286,7 @@
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(7, 151);
+            textBox6.Location = new Point(9, 181);
             textBox6.Margin = new Padding(3, 4, 3, 4);
             textBox6.Name = "textBox6";
             textBox6.ReadOnly = true;
@@ -1263,7 +1296,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(7, 114);
+            textBox5.Location = new Point(9, 144);
             textBox5.Margin = new Padding(3, 4, 3, 4);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
@@ -1669,26 +1702,6 @@
             b_enemy_dupe.UseVisualStyleBackColor = true;
             b_enemy_dupe.Click += b_enemy_dupe_Click;
             // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(327, 46);
-            textBox8.Margin = new Padding(3, 4, 3, 4);
-            textBox8.Name = "textBox8";
-            textBox8.ReadOnly = true;
-            textBox8.Size = new Size(313, 26);
-            textBox8.TabIndex = 87;
-            textBox8.Text = " Options";
-            // 
-            // textBox23
-            // 
-            textBox23.Location = new Point(327, 12);
-            textBox23.Margin = new Padding(3, 4, 3, 4);
-            textBox23.Name = "textBox23";
-            textBox23.ReadOnly = true;
-            textBox23.Size = new Size(313, 26);
-            textBox23.TabIndex = 90;
-            textBox23.Text = " (NewEntityID=MapID..Unique4DigitEntityID)";
-            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
@@ -1809,6 +1822,7 @@
         private CheckBox c_override_existing;
         private CheckBox c_entityid_printDebug;
         private CheckBox c_entityid_player;
+        private CheckBox c_entityID_use_ignore_list;
         private TextBox textBox12;
         private TextBox textBox11;
         private CheckBox c_entitygroup_enemy;

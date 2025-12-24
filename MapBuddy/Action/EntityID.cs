@@ -22,7 +22,7 @@ namespace MapBuddy.Action
 
         bool incompleteChange;
 
-        public EntityID(string map_selection, string path, bool isAssetChange, bool isEnemyChange, bool isPlayerChange, bool overrideExisting, ulong range_start_id, ulong range_end_id)
+        public EntityID(string map_selection, string path, bool isAssetChange, bool isEnemyChange, bool isPlayerChange, bool overrideExisting, bool useIgnoreList, ulong range_start_id, ulong range_end_id)
         {
             map_dict = util.GetMapSelection(map_selection, path, logger);
 
@@ -53,7 +53,7 @@ namespace MapBuddy.Action
                 MSBE msb = MSBE.Read(map_path);
 
                 incompleteChange = false;
-                msb = AddUniqueEntityID(msb, map_name, entity_prefix, isAssetChange, isEnemyChange, isPlayerChange, overrideExisting, range_start_id, range_end_id, globalUsedIds);
+                msb = AddUniqueEntityID(msb, map_name, entity_prefix, isAssetChange, isEnemyChange, isPlayerChange, overrideExisting, useIgnoreList, range_start_id, range_end_id, globalUsedIds);
 
                 msb.Write(map_path, compressionType);
 
@@ -74,8 +74,12 @@ namespace MapBuddy.Action
 
         // Added parameter globalUsedIds so assigned IDs are unique across all processed MSBs
         // Added parameter useSavedFlags to exclude IDs whose last 4 digits fall within disallowed ranges
-        public MSBE AddUniqueEntityID(MSBE msb, string map, string entity_id_prefix, bool isAssetChange, bool isEnemyChange, bool isPlayerChange, bool overrideExisting, ulong range_start_id, ulong range_end_id, HashSet<ulong> globalUsedIds)
+        public MSBE AddUniqueEntityID(MSBE msb, string map, string entity_id_prefix, bool isAssetChange, bool isEnemyChange, bool isPlayerChange, bool overrideExisting, bool useIgnoreList, ulong range_start_id, ulong range_end_id, HashSet<ulong> globalUsedIds)
         {
+            string ResourceFolder = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "Resources");
+            string ignore_chr_list = File.ReadAllText(Path.Combine(ResourceFolder, "ignore_chr_list.txt"));
+            string[] chr_exclusion = ignore_chr_list.Split(";");
+
             // Get count for Enumerable
             ulong range_diff = range_end_id - range_start_id;
             logger.AddToDebugLog($"Start: {range_start_id}, End: {range_end_id}");
@@ -143,6 +147,14 @@ namespace MapBuddy.Action
             {
                 foreach (MSBE.Part.Enemy entity in msb.Parts.Enemies)
                 {
+                    string ModelName = entity.ModelName;
+                    // Skip if ModelName is in Boss exclusion list
+                    if (useIgnoreList && chr_exclusion.Contains(ModelName))
+                    {
+                        logger.AddToLog($"Excluded: {entity.Name}.");
+                        continue;
+                    }
+
                     if (entity.EntityID == 0 || overrideExisting == true)
                     {
                         ulong? id = GetNextValidId();

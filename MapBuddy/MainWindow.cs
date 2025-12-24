@@ -29,8 +29,8 @@ namespace MapBuddy
                 }
                 return _mod_folder;
             }
-            set 
-            { 
+            set
+            {
                 _mod_folder = value;
                 File.WriteAllText(settings_file, _mod_folder);
             }
@@ -58,6 +58,7 @@ namespace MapBuddy
             t_entityid_end.Text = "9999";
 
             c_entitygroup_enemy.Checked = true;
+            c_entityID_use_ignore_list.Checked = true;
             c_entityid_printDebug.Checked = false;
             // Initialize the static logger flag and keep it in sync with the checkbox
             Logger.PrintDebug = c_entityid_printDebug.Checked;
@@ -143,7 +144,7 @@ namespace MapBuddy
             string entity_group_id = t_dupe_entity_group_id.Text;
             string dupe_count = t_dupe_count.Text;
 
-             if (!IsDigitsOnly(entity_group_id))
+            if (!IsDigitsOnly(entity_group_id))
             {
                 MessageBox.Show($"Entity Group ID is not numeric.", "Error", MessageBoxButtons.OK);
                 return;
@@ -185,7 +186,7 @@ namespace MapBuddy
                 MessageBox.Show($"No property type selected.", "Error", MessageBoxButtons.OK);
                 return;
             }
-            else if(!IsDigitsOnly(start_id))
+            else if (!IsDigitsOnly(start_id))
             {
                 MessageBox.Show($"Start ID is not numeric.", "Error", MessageBoxButtons.OK);
                 return;
@@ -227,11 +228,12 @@ namespace MapBuddy
 
             EntityID action = new EntityID(
                 cb_map_select.Text,
-                mod_folder, 
-                c_entityid_asset.Checked, 
-                c_entityid_enemy.Checked, 
+                mod_folder,
+                c_entityid_asset.Checked,
+                c_entityid_enemy.Checked,
                 c_entityid_player.Checked,
                 c_override_existing.Checked,
+                c_entityID_use_ignore_list.Checked,
                 Convert.ToUInt64(t_entityid_start.Text),
                 Convert.ToUInt64(t_entityid_end.Text)
             );
@@ -280,7 +282,7 @@ namespace MapBuddy
             {
                 ulong entitygroup_id = Convert.ToUInt64(t_entitygroup_id.Text);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Entity Group ID is too high.", "Error", MessageBoxButtons.OK);
                 return;
@@ -388,11 +390,11 @@ namespace MapBuddy
             region_elements.Add("WindSFX", c_region_windsfx.Checked);
 
             MapInfo action = new MapInfo(
-                cb_map_select.Text, 
-                mod_folder, 
-                part_elements, 
-                event_elements, 
-                region_elements, 
+                cb_map_select.Text,
+                mod_folder,
+                part_elements,
+                event_elements,
+                region_elements,
                 c_split_by_map.Checked
             );
         }
@@ -489,6 +491,14 @@ namespace MapBuddy
             {
                 c_entityid_enemy.Checked = false;
                 c_entityid_asset.Checked = false;
+            }
+        }
+
+        private void c_entityID_use_ignore_list_CheckChanged(object sender, EventArgs e)
+        {
+            if (c_entityID_use_ignore_list.Checked)
+            {
+                c_entityID_use_ignore_list.Checked = false;
             }
         }
 
